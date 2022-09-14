@@ -1,0 +1,33 @@
+Part A -
+
+
+b) The enqueue() functions in the Stack and Queue classes have both already been implemented without using in-built array methods. Instead, we have created a reference to the Queue array and then equated the $value argument to the queue. Then, we have incremented the size of the queue as a new value has been appended. Lastly, we have returned the new queue using the return statement. 
+
+
+The dequeue() function in the Queue class makes use of the in-built array_shift() function. The array_shift() function removes the first 
+element from an array and returns the value of the element that was removed. All numerical array keys will be changed to begin counting 
+from zero, but literal keys will remain unchanged. 
+
+If we were to do this without using an array method, we could first store the value at the 0th index into a variable. Then, we could use the inbuilt unset() function to remove the item at the 0th index. This is because elements are always removed from the front of the Queue 
+as it follows First In First Out (FIFO). We would also need to decrement the size variable (which stores the number of elements in the 
+queue) by 1, as an item has been removed from the queue. Lastly, we would return the element which has been removed from from the queue 
+(which we have earlier stored as a variable) using the "return" syntax.
+
+Similarly, the dequeue() function in the Stack class makes use of the in-built array_pop() function. The array_pop() function pops and 
+returns the value of the array's last element, shortening the array by one element.
+
+If we were to do this without using an array method, we could we could first store the value at the last index into a variable. We can find 
+the last index using the size() function that written in the Queue class. Then, we could use the inbuilt unset() function to remove the 
+last item in the stack. This is because elements are always removed from the back of the Stack as it follows Last In First Out (LIFO).We would also need to decrement the size variable (which stores the number of elements in the stack) by 1, as an item has been removed from the stack. Lastly, we would return the element which has been removed from from the queue (which we have earlier stored as a variable) using the "return" syntax.
+
+
+
+
+c)The classes that we have currently written, abide by the Single Responsibility Principle. The Stack and Queue class each have only one 
+responsibility. Each class contains all functionality needed to support their respective responsibility. 
+
+The code also abides by the Open/Closed Principle. The code is open for extension but closed for modification, we are able to easily add 
+new features without breaking old ones. This is due to the fact that we have defined the IQueuable interface. Due to this, we can now create 
+new classes in the future that implement this interface. We can also add extra methods if the need arises. Lastly, we can also add more 
+interfaces in the future to support more data structures apart from Stack and Queue. Following OCP makes code easier to extend and maintain. 
+

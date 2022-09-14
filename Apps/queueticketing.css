@@ -1,0 +1,309 @@
+* Page which contains css for customerview.html and countermanagement.html*/
+
+/* css for customerview.html */
+html{
+    overflow-x: hidden;
+    background-color: rgb(240, 244, 250);
+}
+
+.main{
+    margin: -10px -10px 0 -10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 320px;
+    padding: 10px;
+    align-items: center;
+}
+
+.main .main-box{
+    height: 70%;
+    width: 40%;
+    font-weight: bold;
+    border: 1px lightblue;
+    /*border-radius: 15px; */
+    box-shadow: 5px 5px 5px lightblue;
+    color: black;
+    background-color: rgb(186, 214, 247);
+    font-family: "Times New Roman", Times, serif;
+    
+}
+
+.main .main-box .box-wrap div{
+    padding: 10px;
+    width: 45%;
+    height: 35%;
+    text-align: left;
+    display: inline-block;
+    font-size: 30px;
+    /*font-weight: bold; */
+    
+}
+
+.main .main-box .box-wrap div:nth-child(2){
+    color: black;
+    text-align: center;
+}
+
+.main .main-box .box-wrap div:nth-child(4){
+    color: black;
+    text-align: center;
+}
+
+.main .main-box .button-wrapper{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    height: 40%;
+}
+
+.main .main-box .button-wrapper button{
+    padding: 10px;
+    width: 45%;
+    height: 45px;
+    font-weight: bold;
+    line-height: 22px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px black;
+    background-color: rgb(115, 192, 255);
+    font-size: 25px;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    transition: 40ms linear;
+}
+
+.main .main-box .button-wrapper button:hover{
+    width: 47%;
+    height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.display-counters{
+    margin: 0 -10px 0 -10px;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    padding-inline: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-counters-box{
+    width: calc((100% - 100px) /4);
+    height: 200px;
+    display: inline-block;
+    margin-inline:20px;
+    box-shadow: 3px 3px 3px black;
+    border: 1px black;
+    /*border-radius: 15px; */
+    color: black;
+    background-color: rgb(240, 210, 182);
+}
+
+.signal-wrapper,.counter,.currently-serving{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.counter,.currently-serving{
+    height: 39%;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.currently-serving{
+    color: black;
+}
+
+.signal{
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+}
+
+.on .signal-wrapper .signal{
+    background-color: rgb(86, 255, 86);
+    box-shadow: 0px 1px 10px rgb(86, 255, 86);
+}
+
+.busy .signal-wrapper .signal{
+    background-color: rgb(255, 25, 25);
+    box-shadow: 0px 1px 10px rgb(255, 25, 25);
+}
+
+.off{
+    color: black;
+    background-color: rgb(199, 199, 199);
+}
+
+.off .signal-wrapper .signal{
+    background-color: rgb(160, 160, 160);
+    box-shadow: 0px 1px 10px rgb(160, 160, 160);
+}
+
+
+
+@media (max-width:1270px){
+    .gettic{
+        height: 500px;
+    }
+    .gettic .gettic-box .button-wrapper button{
+        width: 60%;
+    }
+}
+
+@media (max-width:1035px){
+    .gettic .gettic-box .box-wrap div{
+        width: 100%;
+    }
+}
+
+@media (max-width:850px){
+    .gettic .gettic-box .button-wrapper button{
+        width: 90%;
+    }
+}
+
+@media (max-width:720px){
+    .display-counters{
+        flex-wrap: wrap;
+    }
+    .display-counters-box{
+        margin-top: 20px;
+        width: calc((100% - 100px) / 2);
+    }
+}
+
+@media (max-width:620px){
+    .gettic{
+        height: 720px;
+    }
+    .gettic .gettic-box .button-wrapper button{
+        height: 80px;
+    }
+}
+
+/* css for countermanagement.html */
+
+.counter{
+    margin-top: 20px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.individual-counter{
+    display: inline-block;
+    height: 350px;
+    width: calc(( 100% - 200px)/4);
+    margin-inline: 20px;
+    background-color: rgb(186, 214, 247);
+    box-shadow: 5px 5px 5px lightblue;
+    /*border-radius: 10px; */
+}
+
+.individual-counter form{
+    height: 100%;
+    width: 100%;
+}
+
+.counter-number,.counterbutton-wrapper{
+    width: 100%;
+    height: 25%;
+    font-size: 35px;
+    text-align: center;
+    line-height: 80px;
+    /*border-bottom: 1px solid rgb(190, 190, 190);*/
+    color: black;
+}
+
+.counterbutton-wrapper{
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.counterbutton-wrapper button{
+    height: 20%;
+    width: 85%;
+    font-size: 30px;
+    border: none;
+    /*-radius: 10px;*/
+    box-shadow: 0px 0.5px 5px black;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    transition: 100ms linear;
+    background-color: rgb(128, 201, 128);
+}
+
+.counterbutton-wrapper button:hover{
+    height: 22%;
+    width: 90%;
+    color: rgb(184, 201, 255);
+    background-color: rgb(50, 100, 50);
+    cursor: pointer;
+}
+
+.go-offline button:first-child{
+    background-color: rgb(247, 92, 92);
+    cursor: pointer;
+}
+
+.go-offline button:first-child:hover{
+    color: rgb(235, 230, 230);
+    background-color: rgb(163, 162, 162);
+    cursor: pointer;
+}
+
+.go-online button:first-child{
+    color: rgb(235, 230, 230);
+    background-color: rgb(163, 162, 162);
+    cursor: pointer;
+}
+
+.go-online button:nth-child(2), .go-online button:nth-child(3){
+    color: rgb(235, 230, 230);
+    background-color: rgb(163, 162, 162);
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.go-online button:nth-child(2):hover, .go-online button:nth-child(3):hover{
+    height: 20%;
+    width: 85%;
+    cursor: pointer;
+}
+
+.go-online button:first-child:hover{
+    background-color: rgb(255, 118, 118);
+    color: rgb(255, 196, 196);
+    cursor: pointer;
+}
+
+
+.countercurrbutton-wrapper button{
+    height: 20%;
+    width: 85%;
+    font-size: 30px;
+    border: none;
+    /*-radius: 10px;*/
+    box-shadow: 0px 0.5px 5px black;
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    transition: 100ms linear;
+    background-color: rgb(14, 105, 180);
+}
