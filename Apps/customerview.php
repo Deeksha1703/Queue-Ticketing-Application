@@ -97,6 +97,6 @@ if(!$connection){
             ?>
         </section>
     </body>
-    <!-- Auto-Refreshing the page every 5 seconds -->
-    <!-- <meta http-equiv="refresh" content="5" /> -->
+    <!-- Auto-Refreshing the page every 4 seconds -->
+    <meta http-equiv="refresh" content="4" /> 
 </html>
